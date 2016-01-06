@@ -2,14 +2,14 @@
 def getNext(password):
     """
     Série de tests exprimés en doctest
-    >>> getNext('a')
-    'b'
+    >>> print(getNext('zzzzz'))
+    'aaaaa'
     >>> getNext('az')
     'ba'
     >>> getNext('bc')
     'bd'
     """
-    pwd = list(password)  #1 Initialise pwd en list
+    pwd = list(password)  #1 Converti pwd en list
     found = False
     i=len(pwd)-1
 
@@ -18,8 +18,11 @@ def getNext(password):
            pwd[i] = chr(ord(pwd[i])+1)  #2 Modifie le mot de passe
            found = True             
         else:
-           pwd[i] = 'a' 
-           i = i-1 
+           if i > 0:
+               pwd[i] = 'a' 
+               i = i-1
+           else:
+               return 'Erreur incrément index liste  '+password
     
     return ''.join(pwd) #3 Retourne le nouveau mot de passe avec la lettre changée. 
 
