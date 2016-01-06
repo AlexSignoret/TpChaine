@@ -11,7 +11,7 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(pwd.getNext("abhz"), "abia")
         
     def test_getNextEndLine(self):
-        self.assertEqual(pwd.getNext("zzzzz"), "Erreur incrément index liste zzzzz ")
+        self.assertRaises('Erreur incrément index liste  '+ password, pwd.getNext,"zzzzz")
 
 
 # Permet d'exécuter les tests si ce fichier est exécuté

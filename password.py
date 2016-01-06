@@ -22,9 +22,10 @@ def getNext(password):
                pwd[i] = 'a' 
                i = i-1
            else:
-               return 'Erreur incrément index liste  '+password
+               raise Exception ('Erreur incrément index liste  '+password)
     
     return ''.join(pwd) #3 Retourne le nouveau mot de passe avec la lettre changée. 
+
 
 
 
