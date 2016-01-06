@@ -9,18 +9,19 @@ def getNext(password):
     >>> getNext('bc')
     'bd'
     """
-    pwd = list(password)  #1
+    pwd = list(password)  #1 Initialise pwd en list
     found = False
     i=len(pwd)-1
 
     while not found:
         if pwd[i] < 'z':
-           pwd[i] = chr(ord(pwd[i])+1)  #2
+           pwd[i] = chr(ord(pwd[i])+1)  #2 Modifie le mot de passe
            found = True             
         else:
+           pwd[i] = 'a' 
            i = i-1 
     
-    return ''.join(pwd) #3
+    return ''.join(pwd) #3 Retourne le nouveau mot de passe avec la lettre changée. 
 
 
 
