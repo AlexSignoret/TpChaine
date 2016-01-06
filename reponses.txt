@@ -3,3 +3,7 @@ SIGNORET Alexandre DASI 2
 Question 1.4
 
 Les caractères spéciaux et quand on arrive jusqu'à z ou à 9. 
+
+Question 2.3
+
+(26^N)-1
